@@ -1,36 +1,39 @@
-#include<iostream>
+#include <iostream>
 #include "array.h"
-AS_array *newArray(int newcapacity)
+AS_array::AS_array()
 {
-    AS_array *a = new AS_array();
-    a->capacity = newcapacity;
-    a->size = 0;
-    a->arr = new int[newcapacity];
-    return a;
+    arr = new int[10];
 }
-int size_of_ASarray(AS_array *a)
+int AS_array::size_of_ASarray()
 {
-    return a->size;
+    return size;
 }
-int capacity_of_ASarray(AS_array *a)
+int AS_array::capacity_of_ASarray()
 {
-    return a->capacity;
+    return capacity;
 }
-bool is_ASarray_empty(AS_array *a)
+bool AS_array::is_ASarray_empty()
 {
-    if (a->size)
+    if (size)
         return true;
     else
         return false;
 }
-int at_ASarray(AS_array *a,int index){
-    if(a->size == 0){
-        std::cout<<"ERROR : Array empty.\n";
+int AS_array::at_ASarray(int index)
+{
+    if (size == 0)
+    {
+        std::cout << "ERROR : Array empty.\n";
         return -1;
     }
-    if(index+1>a->size || index < 0){
-        std::cout<<"ERROR : Index out of range.\n";
+    if (index + 1 > size || index < 0)
+    {
+        std::cout << "ERROR : Index out of range.\n";
         return -1;
     }
-    return a->arr[index];
+    return arr[index];
+}
+void AS_array::push_ASarray(int data)
+{
+    
 }
