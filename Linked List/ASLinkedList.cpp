@@ -130,7 +130,6 @@ int LinkedList::back()
 }
 void LinkedList::insert(int index, int value)
 {
-    int sizee = size();
     if (sizee = 0 || index > sizee - 1)
     {
        // cout << "ERROR : The index value out of bounds.\n";
@@ -141,6 +140,7 @@ void LinkedList::insert(int index, int value)
         newNode->data = value;
         newNode->next = Head;
         Head = newNode;
+        sizee++;
     }
     else
     {
@@ -151,20 +151,22 @@ void LinkedList::insert(int index, int value)
         {
             temp = temp->next;
         }
+        sizee++;
         newNode->next = temp->next;
         temp->next = newNode;
     }
 }
 void LinkedList::erase(int index)
 {
-    int sizee = size();
     if (sizee = 0 || index > sizee - 1)
     {
         //cout << "ERROR : The index value out of bounds.\n";
     }
     if (index == 0)
-    {
+    {   Node* temp = Head;
         Head = Head->next;
+        delete temp;
+        sizee--;
     }
     else
     {
@@ -173,7 +175,9 @@ void LinkedList::erase(int index)
         {
             temp = temp->next;
         }
+        Node *t = temp->next;
         temp->next = temp->next->next;
+        delete t;
     }
 }
 int LinkedList::value_n_from_end(int n)
