@@ -28,7 +28,5 @@ int main()
     arr.pop();
 
     cout<<arr.capacityArray()<<endl;
-    
-    cout<<arr.size<<" "<<arr.capacity;
     return 0;
 }

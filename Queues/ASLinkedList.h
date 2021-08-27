@@ -8,6 +8,7 @@ class LinkedList{
 	};
     public:
     Node* Head = NULL;
+    Node* Tail = NULL;
     int sizee = 0;
     int size();
     bool isEmpty();
