@@ -14,7 +14,7 @@ public:
     void deleteIndex(int index);
     void removeItem(int item);
     int find(int val);
-    //private:
+    private:
     void resize(int change);
     int size = 0;
     int capacity = 10;
