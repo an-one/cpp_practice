@@ -1,14 +1,13 @@
 #include<iostream>
-//#include"Queues.h"
-//#include"Queues.cpp"
-
+#include"Queues.h"
+#include"Queues.cpp"
+using namespace std;
 int main(){
-    int* ptr = nullptr;
-    int* pt1r = nullptr;
-    if(ptr == pt1r){
-        std::cout<<"eq"<<std::endl;
-    }else{
-        std::cout<<"neq"<<std::endl;
-    }
+    Queues a;
+    cout<<a.empty()<<endl;
+    a.enqueue(123);
+    cout<<a.empty()<<endl;
+    cout<<a.dequeue()<<endl;
+    cout<<a.empty()<<endl;
     return 0;
 }

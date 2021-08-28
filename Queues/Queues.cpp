@@ -27,6 +27,7 @@ int Queues::dequeue()
         int ret = tail->next->data;
         delete tail->next;
         tail->next = nullptr;
+        return ret;
     }else{
         if(head != nullptr){
             int ret = head->data;
@@ -39,6 +40,7 @@ int Queues::dequeue()
             return -1;
         }
     }
+    return -1;
 }
 bool Queues::empty(){
     if(head == nullptr){
