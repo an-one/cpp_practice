@@ -1,8 +1,14 @@
 #include<iostream>
-#include"Queues.h"
-#include"Queues.cpp"
+//#include"Queues.h"
+//#include"Queues.cpp"
 
 int main(){
-    int a= 1+1;
+    int* ptr = nullptr;
+    int* pt1r = nullptr;
+    if(ptr == pt1r){
+        std::cout<<"eq"<<std::endl;
+    }else{
+        std::cout<<"neq"<<std::endl;
+    }
     return 0;
 }

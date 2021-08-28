@@ -13,6 +13,7 @@ class Queues{
     Node* tail = nullptr;
     void enqueue(int data);
     int dequeue();
+    bool empty();
 
 
 };
