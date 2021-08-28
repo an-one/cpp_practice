@@ -6,13 +6,13 @@ int LinkedList::size()
 bool LinkedList::isEmpty()
 
 {
-    if (Head == NULL)
+    if (Head == nullptr)
         return true;
     return false;
 }
 int LinkedList::value_at(int n)
 {
-    if (Head == NULL)
+    if (Head == nullptr)
     {
         //cout << "ERROR : The array is not having any element.\n";
         return -1;
@@ -35,10 +35,10 @@ void LinkedList::push_front(int n)
 {
     Node *newNode = new Node();
     newNode->data = n;
-    if (Head == NULL)
+    if (Head == nullptr)
     {
         Head = newNode;
-        Head->next = NULL;
+        Head->next = nullptr;
         sizee++;
     }
     else
@@ -52,7 +52,7 @@ int LinkedList::pop_front()
 {
     Node *temp = Head;
     
-    if (Head == NULL)
+    if (Head == nullptr)
     {
         //cout << "ERROR : The list is empty.\n";
         return -1;
@@ -70,8 +70,8 @@ void LinkedList::push_back(int n)
 {
     Node *newNode = new Node();
     newNode->data = n;
-    newNode->next = NULL;
-    if (Head == NULL)
+    newNode->next = nullptr;
+    if (Head == nullptr)
     {
         Head = newNode;
         sizee++;
@@ -79,7 +79,7 @@ void LinkedList::push_back(int n)
     else
     {
         Node *temp = Head;
-        while (temp->next != NULL)
+        while (temp->next != nullptr)
         {
             temp = temp->next;
         }
@@ -91,19 +91,19 @@ int LinkedList::pop_back()
 {
     Node *temp = Head;
     int data;
-    while (temp->next->next != NULL)
+    while (temp->next->next != nullptr)
     {
         temp = temp->next;
     }
     data = temp->next->data;
     delete temp->next;
     sizee--;
-    temp->next = NULL;
+    temp->next = nullptr;
     return data;
 }
 int LinkedList::front()
 {
-    if (Head == NULL)
+    if (Head == nullptr)
     {
        // cout << "ERROR : The linked list is empty.\n";
         return -1;
@@ -113,7 +113,7 @@ int LinkedList::front()
 }
 int LinkedList::back()
 {
-    if (Head == NULL)
+    if (Head == nullptr)
     {
         //cout << "ERROR : The linked list is empty.\n";
         return -1;
@@ -121,7 +121,7 @@ int LinkedList::back()
     else
     {
         Node *temp = Head;
-        while (temp->next != NULL)
+        while (temp->next != nullptr)
         {
             temp = temp->next;
         }
@@ -202,13 +202,13 @@ int LinkedList::value_n_from_end(int n)
 }
 void LinkedList::reverse()
 {
-    if (Head == NULL)
+    if (Head == nullptr)
     {
         //cout << "ERROR : The list in empty.\n";
     }
     else
     {
-        Node *temp = Head, *toBeReversed = Head, *alreadyReversed = NULL;
+        Node *temp = Head, *toBeReversed = Head, *alreadyReversed = nullptr;
         int s = size();
         for (int i = 0; i < s; i++)
         {

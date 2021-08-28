@@ -7,7 +7,7 @@ class LinkedList{
 		Node* next;
 	};
     public:
-    Node* Head = NULL;
+    Node* Head = nullptr;
     int sizee = 0;
     int size();
     bool isEmpty();
