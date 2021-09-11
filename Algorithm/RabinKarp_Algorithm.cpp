@@ -30,7 +30,7 @@ void search(char pat[], char txt[])
 /* Driver code */
 int main()
 {
-	char txt[] = "anuragsinghanurag";
+	char txt[] = "anurag singh anurag";
 	char pat[] = "singh";
 	
 	// Function Call
