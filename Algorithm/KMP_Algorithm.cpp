@@ -87,7 +87,7 @@ void computeLPSArray(char* pat, int M, int* lps)
 int main()
 {
 	char txt[] = "ABABDABACDABABCABAB";
-	char pat[] = "AAACAAAA";
+	char pat[] = "ABBCAABC";
 	KMPSearch(pat, txt);
 	return 0;
 }
