@@ -21,9 +21,9 @@ void search(char pat[], char txt[])
         if(ht == hp){
             cout<<"Pattern found at :"<<i-p<<"\n";
         }   
-        ht = ht-((txt[i-p])*po);
-        i++; 
-        ht = ht*10 +(txt[i-1]);
+        ht = ht-((txt[i-p])*po); 
+        ht = ht*10 +(txt[i]);
+        i++;
     }while(i<=t);
 }
 
