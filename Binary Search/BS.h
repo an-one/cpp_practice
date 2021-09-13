@@ -1,4 +1,6 @@
-int searchBS(int arr[],int size,int target){
+#pragma once
+int binary_search();
+int searchB(int arr[],int size,int target){
     int low = 0;
   int high = size - 1;
   int mid = 0;
