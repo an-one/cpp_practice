@@ -6,7 +6,7 @@ class Bst{
         Node* left;
         Node* right;
     };
-    Node* root = NULL;
+    Node* root = nullptr;
     public:
     bool isEmpty();
     void insertBST(int);
