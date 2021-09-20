@@ -1,5 +1,6 @@
 #pragma once
 class Bst{
+    public:
     class Node{
         public:
         int data;
@@ -7,7 +8,8 @@ class Bst{
         Node* right;
     };
     Node* root = nullptr;
-    public:
+    
+    
     bool isEmpty();
     void insertBST(int);
 
