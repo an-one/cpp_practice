@@ -8,7 +8,5 @@ int main(){
     a.insertBST(100);
     a.insertBST(100);
     a.insertBST(100);
-    a.insertBST(1090);
-    
-    
+    a.insertBST(1090);   
 }
