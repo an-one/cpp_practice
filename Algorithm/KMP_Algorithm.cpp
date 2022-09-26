@@ -1,6 +1,6 @@
 // C++ program for implementation of KMP pattern searching
 // algorithm
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void computeLPSArray(char* pat, int M, int* lps);
@@ -13,7 +13,7 @@ void KMPSearch(char* pat, char* txt)
 
 	// create lps[] that will hold the longest prefix suffix
 	// values for pattern
-	int lps[M];
+	int lps[5];
 
 	// Preprocess the pattern (calculate lps[] array)
 	computeLPSArray(pat, M, lps);
